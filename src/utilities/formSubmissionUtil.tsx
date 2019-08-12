@@ -6,18 +6,18 @@ import { Thunk } from '../types/Thunk';
 
 
 export const createTicketOnSubmit = <I extends { id?: string }>(
-    initialState: I,
-    formState: I,
-    buildTicketFromState: (fs: I) => Ticket,
-    setFormState: React.Dispatch<React.SetStateAction<I>>,
     dispatch: React.Dispatch<Thunk<IState, Action> | Action>,
     afterSubmit?: (e: React.FormEvent) => void
 ) => (e: React.FormEvent) => {
     e.preventDefault();
-    const builtTicket = buildTicketFromState(formState);
+    const ticket: Ticket = {
+        id: "",
+        photoURL: "",
+        coordinates: "",
+        description: ""
+    };
 
-    dispatch(addTicketAsync(builtTicket));
-    setFormState(initialState);
+    dispatch(addTicketAsync(ticket));
     if (afterSubmit) {
         afterSubmit(e);
     }
