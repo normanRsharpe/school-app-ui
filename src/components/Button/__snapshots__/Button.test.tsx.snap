@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button> :can be disabled 1`] = `
+<button
+  className="bn bg-transparent pa2 dim fw4 f6 gray ba b--moon-gray gray pointer flex items-center"
+  disabled={true}
+  type="button"
+>
+  Test String
+</button>
+`;
+
+exports[`<Button> :can have a border 1`] = `
+<button
+  className="ba bg-transparent pa2 dim fw4 f6 gray ba b--moon-gray gray pointer flex items-center"
+  disabled={false}
+  type="button"
+>
+  Test String
+</button>
+`;
+
+exports[`<Button> :renders children 1`] = `
+<button
+  className="bn bg-transparent pa2 dim fw4 f6 gray ba b--moon-gray gray pointer flex items-center"
+  disabled={false}
+  type="button"
+>
+  Test String
+</button>
+`;

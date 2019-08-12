@@ -1,0 +1,96 @@
+openapi: 3.0.2
+info:
+  title: school-project
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost:8080/'
+paths:
+  /tickets:
+    summary: Path used to manage the list of tickets.
+    description: >-
+      The REST endpoint/path used to list and create zero or more `Ticket` entities.  This path contains
+      a `GET` and `POST` operation to perform the list and create tasks, respectively.
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Ticket'
+          description: Successful response - returns an array of `Ticket` entities.
+      operationId: gettickets
+      summary: List All tickets
+      description: Gets a list of all `Ticket` entities.
+    post:
+      requestBody:
+        description: A new `Ticket` to be created.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Ticket'
+        required: true
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ticket'
+          description: Successful response.
+      operationId: createTicket
+      summary: Create a Ticket
+      description: Creates a new instance of a `Ticket`.
+  '/tickets/{ticketId}':
+    summary: Path used to manage a single Ticket.
+    description: >-
+      The REST endpoint/path used to get, update, and delete single instances of an `Ticket`.  This path
+      contains `GET`, `PUT`, and `DELETE` operations used to perform the get, update, and delete tasks,
+      respectively.
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Ticket'
+          description: Successful response - returns a single `Ticket`.
+      operationId: getTicket
+      summary: Get a Ticket
+      description: Gets the details of a single instance of a `Ticket`.
+    delete:
+      responses:
+        '204':
+          description: Successful response.
+      operationId: deleteTicket
+      summary: Delete a Ticket
+      description: Deletes an existing `Ticket`.
+    parameters:
+      -
+        name: ticketId
+        description: A unique identifier for a `Ticket`.
+        schema:
+          type: string
+        in: path
+        required: true
+components:
+  schemas:
+    Ticket:
+      title: Root Type for Ticket
+      description: Ticket object data type for REST api functions.
+      type: object
+      properties:
+        id:
+          type: string
+        photoURL:
+          type: string
+        coordinates:
+          type: string
+        description:
+          type: string
+      example:
+        id: string
+        photoURL: string
+        coordinates: string
+        description: string
