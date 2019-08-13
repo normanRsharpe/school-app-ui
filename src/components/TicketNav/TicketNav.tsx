@@ -24,7 +24,7 @@ const TicketNav = (): React.ReactElement =>   {
     }, [getApi, dispatch]);
 
     return (
-        <div className="w-70 flex flex-column items-center overflow-scroll">
+        <div className="w-70 flex flex-column-reverse items-center overflow-scroll">
             {getTickets.map(ticket => <TicketSubmission ticket={ticket}/> )}
         </div>
     )
