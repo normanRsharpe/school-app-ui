@@ -16,7 +16,7 @@
 import { Configuration } from "./configuration";
 import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
 
-export const BASE_PATH = "http://sheltered-beach-35105.herokuapp.com/v1".replace(/\/+$/, "");
+export const BASE_PATH = "https://sheltered-beach-35105.herokuapp.com/v1".replace(/\/+$/, "");
 
 /**
  *
