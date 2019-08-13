@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f087d25-9f59-4b00-9145-b2940885970f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/126153adb91b9dc7954b18c14ce262f459ffd3d6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/6/2675cc50309731516e185113235f91c17d27d414" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/d/3d19ad8b42748614020ee3d1c79ea99bc04522f6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c8dc8d7874f894462d3942971a0af1f46e06d54" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/0/50f151b1e07eedb41cd65caabde82a2a774662c4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5ab44fe33ca96299f51ad4778a73e425b92bf439" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5cce166470fe1b8a8dfe571ae68334e6ff78f04d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/7030d0b2f71b999ff89a343de08c414af32fc93a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/7191c52faecf887f178c17a3caa9c9fa97265f2d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/4/7416d243078528a1a4472aabfc6ddc6c3de82b0e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/4/74f45457880f109745ca4ed2f9cfa3fe29ce5ad8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/3/835da56f32df714aaed6285a5b7fc3a7807851e4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/91cb6e000557ff9830d64e9050a9895df4fb4864" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/945a75cf9e909d13492b689b81c413cb5069c33f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac0d51d902305d2f82b6160a8483037f38274d9a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac64df34bcaa88fb76651879c87821a11ca116cf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/5/b57efcad9099e0b3f16ffbcf0112c66599eb3901" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/f/bfb0a98f92167f4593a1e7c2e69b258611a75816" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5d38a62d1faae90a2acaa34b79a7ef365c917e4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/e/cefeba8be68c786e54f331321a08906b02c0e217" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/f/cf5e7ceb2efbfd24647f6158050ba488804ef066" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/4/f43ecdf8d666ee908aacce037b4cd72159e4741b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb6c4533957b1351e2052e323887d68b2e76c7b8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/base.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/base.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SubmitForm/SubmitForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SubmitForm/SubmitForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TicketNav/TicketNav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TicketNav/TicketNav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utilities/formSubmissionUtil.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilities/formSubmissionUtil.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="9f087d25-9f59-4b00-9145-b2940885970f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -261,12 +231,12 @@
       <updated>1565539038402</updated>
       <workItem from="1565539040080" duration="26249000" />
       <workItem from="1565662997676" duration="592000" />
-      <workItem from="1565664031180" duration="2793000" />
+      <workItem from="1565664031180" duration="3023000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29634000" />
+    <option name="totallyTimeSpent" value="29864000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
@@ -277,10 +247,10 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Designer" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.25579977" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.25579977" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32959184" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.32959184" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.32959184" />
       <window_info anchor="bottom" id="Docker" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="SonarLint" order="4" />
