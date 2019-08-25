@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Action, addTicketAsync} from '../actions/actions';
 import {Ticket} from '../api';
 import IState from '../types/State';
 import { Thunk } from '../types/Thunk';
+import {StateContext} from "../context/AppContext";
 
 
 export const createTicketOnSubmit = <I extends { id?: string }>(

@@ -6,6 +6,7 @@ interface IButtonProps {
   name?: string;
   onClick?: (e: React.MouseEvent) => void;
   type?: 'button' | 'submit' | 'reset';
+  style?: string;
 }
 
 const Button: React.FC<IButtonProps> = ({
@@ -14,9 +15,10 @@ const Button: React.FC<IButtonProps> = ({
   name,
   onClick,
   type = 'button',
+  style,
 }) => (
   <button
-    className="bg-moon-gray ph3 pv2 dim fw4 f3 dark-gray pointer br2 flex items-center center"
+    className={`${style? style : "bg-moon-gray"} ph3 pv2 dim fw4 f3 dark-gray pointer br2 flex items-center center`}
     disabled={disabled}
     name={name}
     onClick={onClick}

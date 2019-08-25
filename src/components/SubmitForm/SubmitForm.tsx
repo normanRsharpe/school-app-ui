@@ -1,10 +1,11 @@
 import React, {useContext, useState} from 'react';
 import Button from "../Button/Button";
 import {createTicketOnSubmit} from "../../utilities/formSubmissionUtil";
-import {DispatchContext} from "../../context/AppContext";
+import {DispatchContext, StateContext} from "../../context/AppContext";
 import {Ticket} from "../../api";
 
 export interface TicketFormProps {
+    location?: string
     afterSubmit?: (e: React.FormEvent) => void;
 }
 
@@ -17,6 +18,19 @@ export const SubmitForm: React.FC<TicketFormProps> = ({ afterSubmit }) => {
         description: ""
     };
     const [formState, setFormState] = useState(ticket);
+    function success(position : Position) {
+        console.log("here3")
+        const latitude  = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        setLocation(`https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`);
+    }
+    const setLocation = (location: string) =>{
+        setFormState({
+            ...formState,
+            coordinates: location
+        })
+    };
+
     return (
         <form className="ma5 bg-light-gray shadow-5 br3 flex-column justify-between"
              style={{maxWidth: "26rem", minWidth: "16rem"}}
@@ -37,7 +51,10 @@ export const SubmitForm: React.FC<TicketFormProps> = ({ afterSubmit }) => {
                     })}>Upload Image</Button>
                 </div>
                 <div className="h-100 center">
-                    <Button>Tag Location</Button>
+                    <Button
+                        onClick={() => navigator.geolocation.getCurrentPosition(success)}
+                        style={formState.coordinates ? "bg-green" : ""}
+                    >Tag Location</Button>
                 </div>
                 <div className="h-100 center">
                     <Button type="submit">Submit Ticket</Button>
