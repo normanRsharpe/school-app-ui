@@ -71,11 +71,10 @@ export const SubmitForm: React.FC<TicketFormProps> = ({ afterSubmit }) => {
             </div>
             <div className="h5 flex flex-column justify-between">
                 <div className="h-100 center">
-                    <input type="file" id="fileElem" multiple accept="image/*" onChange={processFile} className="bg-moon-gray pv2 dim dark-gray pointer br2 w4"/>
-                    {/*<Button onClick={() => setFormState({*/}
-                    {/*    ...formState,*/}
-                    {/*    description:"Hello"*/}
-                    {/*})}>Upload Image</Button>*/}
+                    <div className = "upload-btn-wrapper dim">
+                        <Button>Upload Image</Button>
+                        <input type="file" onChange={processFile}/>
+                    </div>
                 </div>
                 <div className="h-100 center">
                     <Button
