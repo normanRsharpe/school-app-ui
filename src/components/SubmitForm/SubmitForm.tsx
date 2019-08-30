@@ -46,6 +46,7 @@ export const SubmitForm: React.FC<TicketFormProps> = ({ afterSubmit }) => {
             console.log(this.responseText);
             const stringResponse = JSON.parse(xhr.response)
             setFormState({
+                ...formState,
                 photoURL: stringResponse.url,
             })
         };
