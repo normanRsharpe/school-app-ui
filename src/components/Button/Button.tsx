@@ -18,11 +18,12 @@ const Button: React.FC<IButtonProps> = ({
   style,
 }) => (
   <button
-    className={`${style? style : "bg-moon-gray"} ph3 pv2 dim fw4 f3 dark-gray pointer br2 flex items-center center`}
+    className={`${style? style : "bg-moon-gray"} dim ph3 pv2 fw4 f3 dark-gray br2 flex items-center center`}
     disabled={disabled}
     name={name}
     onClick={onClick}
     type={type}
+    style={{outline: 0 }}
   >
     {children}
   </button>

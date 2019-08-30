@@ -61,7 +61,7 @@ export const SubmitForm: React.FC<TicketFormProps> = ({ afterSubmit }) => {
                   afterSubmit,
               )}>
             <div className="w-100 h3 br--top br3 bg-silver flex items-center">
-                <div className="center f2 fw3 dark-gray">SUBMIT</div>
+                <div className="center f2 fw4 dark-gray">Submit Ticket</div>
             </div>
             <div>{formState.photoURL ?
                 <div className="ma4 h5 w5 center">
@@ -70,20 +70,23 @@ export const SubmitForm: React.FC<TicketFormProps> = ({ afterSubmit }) => {
                 : <div className="ma4 h5 w5 bg-gray center"/>}
             </div>
             <div className="h5 flex flex-column justify-between">
-                <div className="h-100 center">
+                <div className="h-100 center ">
                     <div className = "upload-btn-wrapper dim">
                         <Button>Upload Image</Button>
                         <input type="file" onChange={processFile}/>
                     </div>
+
                 </div>
-                <div className="h-100 center">
+                <div className="h-100 center ">
                     <Button
                         onClick={() => navigator.geolocation.getCurrentPosition(success)}
                         style={formState.coordinates ? "bg-green" : ""}
                     >Tag Location</Button>
+
                 </div>
-                <div className="h-100 center">
+                <div className="h-100 center ">
                     <Button type="submit">Submit Ticket</Button>
+
                 </div>
             </div>
         </form>
