@@ -1,5 +1,5 @@
 import {
-  ADD_TICKET,
+  ADD_TICKET, DELETE_TICKET,
   SET_TICKETS
 } from '../actions/actions';
 import initialState from '../context/initialState';
@@ -44,6 +44,15 @@ const reducer = (state: IState = initialState, action: Action): IState => {
               .filter(ticketId => ticketId !== ''),
         },
       };
+    case DELETE_TICKET:
+      return {
+        ...state,
+        tickets: {
+          ...state.tickets,
+          allIds: state.tickets.allIds.filter(id => action.payload !== id),
+        },
+      };
+
     default:
       return state;
   }

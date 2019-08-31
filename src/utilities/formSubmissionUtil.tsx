@@ -12,13 +12,6 @@ export const createTicketOnSubmit = <I extends { id?: string }>(
     afterSubmit?: (e: React.FormEvent) => void
 ) => (e: React.FormEvent) => {
     e.preventDefault();
-    // const ticket: Ticket = {
-    //     id: "",
-    //     photoURL: "",
-    //     coordinates: "",
-    //     description: ""
-    // };
-
     dispatch(addTicketAsync(formState));
     if (afterSubmit) {
         afterSubmit(e);

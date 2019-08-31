@@ -1,16 +1,22 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Ticket} from "../../api";
 import Button from "../Button/Button";
+import {deleteTicket, deleteTicketAsync} from "../../actions/actions";
+import {DispatchContext} from "../../context/AppContext";
 
 
 export interface ITicketSubmissionProps {
     ticket: Ticket;
 }
-export const TicketSubmission: React.FC<ITicketSubmissionProps> = ({ticket}) => (
+
+export const TicketSubmission: React.FC<ITicketSubmissionProps> = ({ticket}) => {
+    const { dispatch } = useContext(DispatchContext);
+    return(
     <div className="ma3 bg-light-gray shadow-5 br3 flex-column justify-between"
          style={{maxWidth: "26rem", minWidth: "24rem"}}>
-        <div className="w-100 h3 br--top br3 bg-silver flex items-center">
+        <div className="w-100 h3 br--top br3 bg-silver flex items-center relative overflow-container">
             <div className="center f2 fw4 dark-gray">Ticket</div>
+            <div className="w2 h2 br3 bg-gray tc pt1 f4 dark-gray pointer mr2 absolute" style={{right:5}}onClick={()=>(dispatch(deleteTicketAsync(ticket)))}>X</div>
         </div>
         <div>{ticket.photoURL ?
             <div className="ma4 h5 w5 center">
@@ -23,5 +29,6 @@ export const TicketSubmission: React.FC<ITicketSubmissionProps> = ({ticket}) => 
         </div>
     </div>
 )
+}
 
 export default TicketSubmission;

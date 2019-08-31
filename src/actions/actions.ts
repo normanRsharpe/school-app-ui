@@ -5,6 +5,7 @@ import { AsyncAction } from '../types/AsnycAction';
 // tickets
 export const ADD_TICKET = 'ADD_TICKET';
 export const SET_TICKETS = 'SET_TICKETS';
+export const DELETE_TICKET = 'DELETE_TICKET';
 
 /*
  *
@@ -26,9 +27,28 @@ export const addTicketAsync: AsyncAction = (
     .catch();
 };
 
+export const deleteTicket = (ticket: Ticket) => action(DELETE_TICKET, ticket);
+
+export const deleteTicketAsync: AsyncAction = (
+    ticket: Ticket,
+) => (dispatch, _, getApi) => {
+    ticket.id ?
+    getApi()
+        .deleteTicket(ticket.id)
+        .then(() => {
+            getApi()
+                .gettickets()
+                .then(response => {
+                    dispatch(setTickets(response.data));
+                })
+        })
+        .catch()
+    : console.log("bad request");
+};
+
 
 // the action type
 export type Action =
-
-  | ActionType<typeof setTickets>
-  | ActionType<typeof addTicket>
+    | ActionType<typeof setTickets>
+    | ActionType<typeof addTicket>
+    | ActionType<typeof deleteTicket>
