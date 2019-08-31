@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f087d25-9f59-4b00-9145-b2940885970f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SubmitForm/SubmitForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SubmitForm/SubmitForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TicketSubmision/TicketSubmision.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TicketSubmision/TicketSubmision.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="9f087d25-9f59-4b00-9145-b2940885970f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -259,26 +255,25 @@
       <workItem from="1566190526574" duration="10154000" />
       <workItem from="1566540256764" duration="4904000" />
       <workItem from="1566723911519" duration="231000" />
-      <workItem from="1567133270305" duration="7069000" />
+      <workItem from="1567133270305" duration="7586000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54284000" />
+    <option name="totallyTimeSpent" value="54801000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Designer" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.1935287" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1935287" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32959184" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.18877551" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.18877551" />
       <window_info anchor="bottom" id="Docker" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="SonarLint" order="4" />
