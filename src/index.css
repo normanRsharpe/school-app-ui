@@ -23,3 +23,29 @@ code {
   top: 0;
   opacity: 0;
 }
+
+.header-appear {
+  opacity: 0.5;
+  transform: translateY(-100px);
+
+}
+.header-appear-active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: all 500ms;
+}
+.header-enter {
+  transform: translateX(500px);
+  opacity: 0;
+}
+.header-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.header-exit {
+  opacity: 1;
+}
+.header-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}

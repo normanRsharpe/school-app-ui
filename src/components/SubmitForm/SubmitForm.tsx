@@ -1,8 +1,9 @@
 import React, {useContext, useState} from 'react';
 import Button from "../Button/Button";
-import {createTicketOnSubmit} from "../../utilities/formSubmissionUtil";
-import {DispatchContext, StateContext} from "../../context/AppContext";
+import {createTicketOnSubmit, processFile, setLocation} from "../../utilities/formSubmissionUtil";
+import {DispatchContext} from "../../context/AppContext";
 import {Ticket} from "../../api";
+import initialState from "../../context/initialState";
 
 export interface TicketFormProps {
     location?: string
@@ -18,76 +19,47 @@ export const SubmitForm: React.FC<TicketFormProps> = ({ afterSubmit }) => {
         description: ""
     };
     const [formState, setFormState] = useState(ticket);
-    function success(position : Position) {
-        const latitude  = position.coords.latitude;
-        const longitude = position.coords.longitude;
-        setLocation(`https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`);
-    }
-    const setLocation = (location: string) =>{
-        setFormState({
-            ...formState,
-            coordinates: location
-        })
-    };
 
-    const processFile = (e: any) => {
-        var file = e.target.files[0]
-        var formdata = new FormData();
-
-        formdata.append('file', file);
-        formdata.append('cloud_name',  'normans-cloud');
-        formdata.append('upload_preset', 'hsdpkwtg');
-
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', "https://api.cloudinary.com/v1_1/normans-cloud/image/upload",true);
-
-        xhr.onload = function () {
-            // do something to response
-            console.log(this.responseText);
-            const stringResponse = JSON.parse(xhr.response)
-            setFormState({
-                ...formState,
-                photoURL: stringResponse.url,
-            })
-        };
-        xhr.send(formdata);
-    }
     return (
-        <form className="ma5 bg-light-gray shadow-5 br3 flex-column justify-between"
-             style={{maxWidth: "26rem", minWidth: "16rem"}}
+        <form className="bg-light-gray shadow-5 br3 flex-column"
+             style={{maxWidth: "26rem"}}
               onSubmit={createTicketOnSubmit(
+                  initialState,
                   formState,
                   dispatch,
+                  setFormState,
                   afterSubmit,
-              )}>
-            <div className="w-100 h3 br--top br3 bg-silver flex items-center">
-                <div className="center f2 fw4 dark-gray">Submit Ticket</div>
+              )}
+        >
+            <div className="h3 br--top br3 bg-green flex items-center">
+                <div className="center f2 fw4 near-white">Submit Ticket</div>
             </div>
-            <div>{formState.photoURL ?
+            <div className="ph5">
+                <div>{formState.photoURL ?
                 <div className="ma4 h5 w5 center">
-                    <img src={formState.photoURL} className= "w-100 h-100"/>
+                    <img src={formState.photoURL} className= "w-100 h-100" alt="User submission"/>
                 </div>
                 : <div className="ma4 h5 w5 bg-gray center"/>}
             </div>
             <div className="h5 flex flex-column justify-between">
                 <div className="h-100 center ">
                     <div className = "upload-btn-wrapper dim">
-                        <Button>Upload Image</Button>
-                        <input type="file" onChange={processFile}/>
+                        <Button style={formState.photoURL ? "bg-blue white" : ""}>Upload Image</Button>
+                        <input type="file" onChange={e=> processFile(e)(setFormState, formState)} />
                     </div>
 
                 </div>
                 <div className="h-100 center ">
                     <Button
-                        onClick={() => navigator.geolocation.getCurrentPosition(success)}
-                        style={formState.coordinates ? "bg-green" : ""}
+                        onClick={() => navigator.geolocation.getCurrentPosition(position => setLocation(position, setFormState, formState))}
+                        style={formState.coordinates ? "bg-blue white" : ""}
                     >Tag Location</Button>
 
                 </div>
                 <div className="h-100 center ">
                     <Button type="submit">Submit Ticket</Button>
-
                 </div>
+            </div>
             </div>
         </form>
     );

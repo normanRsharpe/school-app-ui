@@ -2,6 +2,7 @@ import { action, ActionType } from 'typesafe-actions';
 import { Ticket } from '../api';
 import { AsyncAction } from '../types/AsnycAction';
 
+
 // tickets
 export const ADD_TICKET = 'ADD_TICKET';
 export const SET_TICKETS = 'SET_TICKETS';
@@ -42,7 +43,9 @@ export const deleteTicketAsync: AsyncAction = (
                     dispatch(setTickets(response.data));
                 })
         })
-        .catch()
+        .catch(()=> (getApi().gettickets().then(response => {
+            dispatch(setTickets(response.data));
+        })))
     : console.log("bad request");
 };
 

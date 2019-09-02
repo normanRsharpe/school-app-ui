@@ -1,9 +1,12 @@
 import React, {useContext, useEffect} from 'react';
 import {Ticket} from "../../api";
 import {DispatchContext, StateContext} from "../../context/AppContext";
-import {getAllTickets, getTicketById} from "../../reducers/reducer";
+import {getAllTickets} from "../../reducers/reducer";
 import TicketSubmission from "../TicketSubmision/TicketSubmision";
 import {setTickets} from "../../actions/actions";
+import '../../index.css';
+
+import { Flipper, Flipped } from 'react-flip-toolkit'
 
 
 
@@ -24,10 +27,20 @@ const TicketNav = (): React.ReactElement =>   {
     }, [getApi, dispatch]);
 
     return (
-        <div className="w-70 flex flex-column-reverse items-center overflow-scroll">
-            {getTickets.map(ticket => <TicketSubmission ticket={ticket} key={ticket.id}/> )}
-        </div>
+            <div className="w-70 flex flex-column-reverse">
+                    <Flipper flipKey={getTickets.join('')} spring='stiff'>
+                        <ul className="list">
+                            {getTickets.reverse().map(ticket => (
+                                <Flipped key={ticket.id} flipId={ticket.id}>
+                                    <li>
+                                    <TicketSubmission ticket={ticket} key={ticket.id}/>
+                                    </li>
+                                </Flipped>
+                            ))}
+                        </ul>
+                    </Flipper>
+            </div>
+
     )
 }
-
 export default TicketNav;

@@ -1,5 +1,5 @@
 import React, {createContext, Dispatch, useCallback, useEffect, useRef, useState} from 'react';
-import {Action, SET_TICKETS, setTickets} from '../actions/actions';
+import {Action, setTickets} from '../actions/actions';
 import { DefaultApi } from '../api/api';
 import reducer from '../reducers/reducer';
 import IState from '../types/State';
