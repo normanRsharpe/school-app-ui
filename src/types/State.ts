@@ -1,7 +1,7 @@
 import { Ticket } from '../api';
 
-export interface IEntity<E> {
-  readonly byId: { readonly [id: string]: E };
+export interface IEntity<T> {
+  readonly byId: { readonly [id: string]: T };
   readonly allIds: ReadonlyArray<string>;
 }
 

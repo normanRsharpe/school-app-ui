@@ -47,7 +47,9 @@ V
 &src/components/TicketNav/TicketNav.tsx,5/0/50f151b1e07eedb41cd65caabde82a2a774662c4
 @
 src/api/index.ts,0/3/03493a35d9c76619d61c86a19001859bd4d81880
-M
-src/reducers/reducer.test.tsx,0/3/03470e2e51ac9cf8a4ea0b6c00b80244c433e48e
 L
 src/components/Main/Main.tsx,a/d/adbed92f080cc2693875e638713e631fc04104d8
+L
+src/actions/actions.test.tsx,1/9/197d4ebb01ae21b75c9e0be2a0fd45c1dafc30ef
+M
+src/reducers/reducer.test.tsx,0/3/03470e2e51ac9cf8a4ea0b6c00b80244c433e48e

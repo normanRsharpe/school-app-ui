@@ -24,7 +24,6 @@ const reducer = (state: IState = initialState, action: Action): IState => {
     case SET_TICKETS:
       const startObject: { readonly [id: string]: Ticket } = {};
       const ticketObject = action.payload.reduce((newObject, ticket) => {
-        // return the half build object
         return ticket.id
             ? {
               ...newObject,
@@ -45,11 +44,14 @@ const reducer = (state: IState = initialState, action: Action): IState => {
         },
       };
     case DELETE_TICKET:
+
+      const { [action.payload.id ? action.payload.id : ""]: value, ...rest } = state.tickets.byId;
       return {
         ...state,
         tickets: {
           ...state.tickets,
           allIds: state.tickets.allIds.filter(id => action.payload !== id),
+          byId: rest
         },
       };
 
