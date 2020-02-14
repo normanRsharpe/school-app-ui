@@ -21,7 +21,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "openapi": "openapi-generator generate -g typescript-axios -i application.yaml -DsupportsES6=true -o src/api"
   },
   "eslintConfig": {
     "extends": "react-app"

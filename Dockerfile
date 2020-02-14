@@ -1,13 +1,11 @@
 FROM node:10
-
-RUN mkdir /app
-WORKDIR /app
-COPY /src /app/src
-COPY ["package.json", "package-lock.json*", "./"]
-
-# If you're using yarn:
-#  yarn build
-RUN npm install --production --silent && mv node_modules ../
-
-# Expose PORT 3000 on our virtual machine so we can run our server
+# creating app directory
+ENV SRC=/usr/src/app
+RUN useradd --user-group --create-home --shell /bin/false app &&\
+  mkdir -p $SRC
+WORKDIR $SRC
+# Install app dependencies
+COPY . $SRC
+RUN npm install
 EXPOSE 3000
+CMD [ "npm", "start" ]
