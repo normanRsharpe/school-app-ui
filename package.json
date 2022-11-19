@@ -12,7 +12,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-flip-toolkit": "^7.0.4",
-    "react-scripts": "3.1.0",
+    "react-scripts": "5.0.1",
     "react-transition-group": "^4.2.2",
     "typesafe-actions": "^4.4.0",
     "typescript": "3.5.3"
